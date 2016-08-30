@@ -15,6 +15,9 @@
 		<listener-class>com.thinkgem.jeesite.modules.sys.listener.WebContextListener</listener-class>
 	</listener>
 	<listener>
+		<!-- Singleton和Prototype外又加入了三个新的web作用域，分别为request、session和global session，
+		如果你想让你的容器里的某个bean拥有其中某种新的web作用域，除了在bean级上配置相应的scope属性，
+		还必须在容器级做一个额外的初始化配置。 -->
         <listener-class>org.springframework.web.context.request.RequestContextListener</listener-class>  
 	</listener>
 	<filter>
